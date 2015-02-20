@@ -1,19 +1,101 @@
 {
-  "type": "record",
-  "namespace": "unicore.content.models",
-  "name": "Localisation",
+  "type": "record", 
+  "namespace": "unicore.content.models", 
+  "name": "Localisation", 
   "fields": [
     {
-      "type": "string",
-      "name": "locale"
-    },
+      "name": "_version", 
+      "type": {
+        "type": "record", 
+        "name": "_version", 
+        "namespace": "elasticgit.models", 
+        "fields": [
+          {
+            "name": "language", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version_string", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }
+        ]
+      }, 
+      "doc": "Model Version Identifier", 
+      "default": {
+        "language": "python", 
+        "language_version_string": "2.7.8 (10f1b29a2bd21f837090286174a9ca030b8680b2, Feb 05 2015, 17:48:23)\n[PyPy 2.5.0 with GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.56)]", 
+        "language_version": "2.7.8", 
+        "package": "elastic-git", 
+        "package_version": "1.0.1"
+      }, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image"
-    },
+      "name": "uuid", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "Unique Identifier", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image_host"
+      "name": "locale", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "locale", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "image", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "image_host", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image_host", 
+      "default": null, 
+      "aliases": []
     }
   ]
 }

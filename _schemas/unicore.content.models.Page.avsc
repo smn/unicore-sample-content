@@ -1,98 +1,273 @@
 {
-  "namespace": "unicore.content.models",
-  "type": "record",
-  "name": "Page",
+  "type": "record", 
+  "namespace": "unicore.content.models", 
+  "name": "Page", 
   "fields": [
     {
-      "type": "string",
-      "name": "subtitle"
-    },
-    {
-      "type": "string",
-      "name": "description"
-    },
-    {
-      "type": "string",
-      "name": "language"
-    },
-    {
-      "type": "string",
-      "name": "title"
-    },
-    {
-      "type": "string",
-      "name": "created_at"
-    },
-    {
-      "type": "boolean",
-      "name": "published"
-    },
-    {
-      "type": "string",
-      "name": "modified_at"
-    },
-    {
+      "name": "_version", 
       "type": {
-        "type": "array",
-        "items": ["string"]
-      },
-      "name": "linked_pages"
-    },
+        "type": "record", 
+        "name": "_version", 
+        "namespace": "elasticgit.models", 
+        "fields": [
+          {
+            "name": "language", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version_string", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }
+        ]
+      }, 
+      "doc": "Model Version Identifier", 
+      "default": {
+        "language": "python", 
+        "language_version_string": "2.7.8 (10f1b29a2bd21f837090286174a9ca030b8680b2, Feb 05 2015, 17:48:23)\n[PyPy 2.5.0 with GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.56)]", 
+        "language_version": "2.7.8", 
+        "package": "elastic-git", 
+        "package_version": "1.0.1"
+      }, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "slug"
-    },
+      "name": "subtitle", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "subtitle", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "content"
-    },
+      "name": "description", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "description", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "source"
-    },
+      "name": "language", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "language", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "boolean",
-      "name": "featured"
-    },
+      "name": "title", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "title", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "boolean",
-      "name": "featured_in_category"
-    },
+      "name": "created_at", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "created_at", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "id"
-    },
+      "name": "published", 
+      "type": [
+        "null", 
+        "boolean"
+      ], 
+      "doc": "published", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "int",
-      "name": "position"
-    },
+      "name": "modified_at", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "modified_at", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "primary_category"
-    },
+      "name": "linked_pages", 
+      "type": {
+        "type": "array", 
+        "name": "linked_pages", 
+        "namespace": "elasticgit.models", 
+        "items": [
+          "null", 
+          "string"
+        ]
+      }, 
+      "doc": "linked_pages", 
+      "default": [], 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image"
-    },
+      "name": "slug", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "slug", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image_host"
-    },
+      "name": "content", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "content", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "uuid",
+      "name": "source", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "source", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "featured", 
+      "type": [
+        "null", 
+        "boolean"
+      ], 
+      "doc": "featured", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "featured_in_category", 
+      "type": [
+        "null", 
+        "boolean"
+      ], 
+      "doc": "featured_in_category", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "id", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "id", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "position", 
+      "type": [
+        "null", 
+        "int"
+      ], 
+      "doc": "position", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "primary_category", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "primary_category", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "image", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "image_host", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image_host", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "uuid", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "uuid", 
+      "default": null, 
       "aliases": [
         "id"
       ]
-    },
+    }, 
     {
+      "name": "author_tags", 
       "type": {
-        "type": "array",
-        "items": ["string"]
-      },
-      "name": "author_tags",
-      "items": "string",
-      "default": []
+        "type": "array", 
+        "name": "author_tags", 
+        "namespace": "elasticgit.models", 
+        "items": [
+          "null", 
+          "string"
+        ]
+      }, 
+      "doc": "author_tags", 
+      "default": [], 
+      "aliases": []
     }
   ]
 }

@@ -1,51 +1,170 @@
 {
-  "type": "record",
-  "namespace": "unicore.content.models",
-  "name": "Category",
+  "type": "record", 
+  "namespace": "unicore.content.models", 
+  "name": "Category", 
   "fields": [
     {
-      "type": "string",
-      "name": "subtitle"
-    },
+      "name": "_version", 
+      "type": {
+        "type": "record", 
+        "name": "_version", 
+        "namespace": "elasticgit.models", 
+        "fields": [
+          {
+            "name": "language", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version_string", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "language_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }, 
+          {
+            "name": "package_version", 
+            "type": [
+              "null", 
+              "string"
+            ]
+          }
+        ]
+      }, 
+      "doc": "Model Version Identifier", 
+      "default": {
+        "language": "python", 
+        "language_version_string": "2.7.8 (10f1b29a2bd21f837090286174a9ca030b8680b2, Feb 05 2015, 17:48:23)\n[PyPy 2.5.0 with GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.56)]", 
+        "language_version": "2.7.8", 
+        "package": "elastic-git", 
+        "package_version": "1.0.1"
+      }, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "language"
-    },
+      "name": "subtitle", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "subtitle", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "title"
-    },
+      "name": "language", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "language", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "id"
-    },
+      "name": "title", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "title", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "source"
-    },
+      "name": "id", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "id", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "int",
-      "name": "position"
-    },
+      "name": "source", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "source", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "boolean",
-      "name": "featured_in_navbar"
-    },
+      "name": "position", 
+      "type": [
+        "null", 
+        "int"
+      ], 
+      "doc": "position", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "slug"
-    },
+      "name": "featured_in_navbar", 
+      "type": [
+        "null", 
+        "boolean"
+      ], 
+      "doc": "featured_in_navbar", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image"
-    },
+      "name": "slug", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "slug", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "image_host"
-    },
+      "name": "image", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image", 
+      "default": null, 
+      "aliases": []
+    }, 
     {
-      "type": "string",
-      "name": "uuid",
+      "name": "image_host", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "image_host", 
+      "default": null, 
+      "aliases": []
+    }, 
+    {
+      "name": "uuid", 
+      "type": [
+        "null", 
+        "string"
+      ], 
+      "doc": "uuid", 
+      "default": null, 
       "aliases": [
         "id"
       ]
